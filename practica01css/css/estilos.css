@@ -1,0 +1,104 @@
+body{
+    font-size: 16px; /* 1em = 16px */
+    margin: 0px auto;
+    max-width: 1024px;
+    --color-fondo-header: #d1e3ee;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+footer{
+    background: #026dc6;
+    margin-top: 15px;
+}
+
+footer article{
+    width: 32.8%;
+    color: white;
+    height: 100px;
+    padding: 30px;
+}
+
+header{
+    background: var(--color-fondo-header);
+}
+
+header nav{
+    background: #026dc6;
+    padding: 2px 0px;
+    width: 99%;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+header nav form{
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+header nav form input {
+    border-radius: 10px;
+
+}
+
+header nav form input[type="text"]{
+    padding: 5px;
+    border-color: azure;
+}
+
+
+header nav ul li{
+    display: inline-block;
+    margin-right: 30px;
+    color: white;
+}
+
+#logo{
+    margin-top: -150px;
+}
+
+header nav form input[type="submit"]{
+    background-color: #02c636;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid #02c636;
+}
+
+#seccion1{
+    margin-top: 15px;
+}
+
+#seccion1 article{
+    text-align: center;
+}
+
+#seccion1 article img{
+    width: 99%;
+    border: 5px solid #cccccc65;
+}
+
+#seccion2 article{
+    width: 32.8%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#seccion2 article input[type="submit"]{
+    background: white;
+    color: blue;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: 35%;
+}
+
+.nito{
+    font-weight: bold;
+}
+
+.UnaSeccion{
+    font-size: 4.5em; /* 4.5em x 16 = 72px */
+}
+
+.otraSeccion{
+    font-size: 2.5em; /* 4.5em x 16 = 72px */
+}
