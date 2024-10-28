@@ -1,0 +1,251 @@
+body{
+    font-family: Gotham, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1400px;
+    --color-morado:#3a1fd2;
+    --color-morado-claro:#f3f2fb;
+    --color-amarillo-claro:#f6f6ea;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "search principal"
+    "sidebar principal"
+    "contribute principal"
+    ". principal"
+    "footer footer";
+
+}
+
+.Featured-Collections{
+    margin-top: 50px;
+}
+
+
+
+header{
+    background-color: var(--color-amarillo-claro);
+    grid-area: header;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.navbar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+header nav ul li{  
+    display: inline-block;
+    margin-right: 50px;
+    color: var(--color-morado);
+    font-weight: bold;  
+}
+
+header input{
+    background: var(--color-morado);
+    color: white;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+header img{
+    width:50px;
+}
+
+.principal{
+    background-color: white;
+    grid-area: principal;
+    padding: 50px 60px;
+}
+
+.Search{
+    grid-area: search;
+    width: 240px;
+    font-size: 0.8em;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.Search input{
+    height: 30px;
+    width: 100%;
+    border: 2px solid rgb(182, 182, 182);
+    border-radius: 2px;
+    
+}
+
+.Search img{
+    width: 12px;
+    position: relative;
+    top: -22px;
+    left: 5px;
+}
+
+.Sidebar{
+    grid-area: sidebar;
+    width: 240px;
+    font-size: 0.8em;
+    margin-left: 100px;
+}
+
+.Sidebar ul{
+    padding: 0px;
+}
+
+.Sidebar ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+.Contribute{
+    grid-area: contribute;
+    width: 200px;
+    background-color: var(--color-morado-claro);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 100px;
+}
+
+.Contribute input{
+    background: var(--color-morado);
+    color: white;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+}
+
+.Contribute h4{
+    font-size: 0.8em;
+}
+
+.Contribute span{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.principalTitulos{
+    font-size:2.5em;
+    font-weight: bold;
+    
+}
+
+.color-gris{
+    color: gray
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,1fr));
+    gap: 30px;
+}
+
+.cards article{
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 20px;
+    vertical-align: top;
+}
+
+.cards h3{
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+.cards img{
+    width: 12%;
+}
+
+.cards-collection{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    gap: 30px;
+}
+
+.cards-collection article{
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    vertical-align: top;
+    margin-top: 30px;
+    height: 350px;
+}
+
+.cards-collection img{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.cards-collection article:nth-child(1){
+    background-color: var(--color-amarillo-claro);
+}
+.cards-collection article:nth-child(2){
+    background-color: var(--color-morado-claro);
+}
+.cards-collection article:nth-child(3){
+    background-color: var(--color-amarillo-claro);
+}
+
+.letra-morada{
+    color: var(--color-morado);
+}
+
+.view-all{
+    float: right;
+    margin-top: -30px;
+    text-decoration: underline
+}
+
+footer{
+    margin-top: 80px;
+    background: #11284c;
+    color: white;
+    padding: 50px;
+    grid-area: footer;
+}
+
+footer article{
+    font-size: 0.6em;
+    width: 16%;
+    display: inline-block;
+    margin-top: 40px;
+    vertical-align: top;
+    margin-right: 80px;
+}
+
+footer img{
+    width: 50px;
+    float: right;
+}
+
+footer ul{
+    padding: 0px;
+}
+
+footer ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.redes-copy{
+    margin-top: 90px;
+    text-align: right;
+}
+
+
+
+.titulo-grande{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}

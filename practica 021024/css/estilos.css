@@ -31,16 +31,16 @@ body{
         "header navbar" 300px
         "sidebar main" 300px
         "footer footer" 100px /
-        200px auto;
+        300px auto;
     }
 }
 
 @media (min-width: 1440px){
     .contenedor{
         grid-template: 
-        ". header ." 100px
+        "header header header" 100px
         "navbar main sidebar" 300px
-        ". footer ." 100px /
+        "footer footer ." 100px /
         200px auto 200px; /*ancho*/
     }
 }
