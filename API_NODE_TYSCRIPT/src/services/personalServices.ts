@@ -1,5 +1,7 @@
 import { Personal,PersonalNuevo } from '../typesPersonal';
 import mysql from 'mysql2/promise';
+import { personaSchema } from '../schema/personal.schema';
+
 
 const conexion = mysql.createPool({
     host: "localhost",
@@ -30,6 +32,10 @@ export const encuentraPersonal = async (id: number) => {
 
 export const agregarPersonal = async (nuevo: PersonalNuevo) => {
     try {
+        const validacion = personaSchema.safeParse(nuevo);
+        if (!validacion.success) {
+            return {error: validacion.error};
+        }
         const [results] = await conexion.query('INSERT INTO personal (nombre, direccion, telefono, estatus) VALUES (?, ?, ?, ?)', 
             [nuevo.nombre, nuevo.direccion, nuevo.telefono, nuevo.estatus]);
 
