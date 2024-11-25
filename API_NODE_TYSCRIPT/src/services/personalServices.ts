@@ -7,7 +7,8 @@ const conexion = mysql.createPool({
     host: "localhost",
     user: "pw",
     password: "1234",
-    database: "pw2024"
+    database: "pw2024",
+    multipleStatements: false
 });
 
 export const obtienePersonal = async () => {
@@ -22,7 +23,32 @@ export const obtienePersonal = async () => {
 
 export const encuentraPersonal = async (id: number) => {
     try{
+        const identificador = {id: id}
+        const validacion = personaSchema.safeParse(identificador);
+
+        if (!validacion.success) {
+            return {error: validacion.error};
+        }
+
         const [results] = await conexion.query('SELECT * FROM personal WHERE id = ? LIMIT 1', id);
+        return results;
+    }
+    catch(error){
+        return {error: "No se pudo obtener el personal"};
+    }    
+}
+
+export const encuentraPersonalTelefono = async (telefono: string) => {
+    try{
+        // const consulta = `SELECT * FROM personal WHERE telefono = ${telefono} AND estatus = 1`;
+        // const [results] = await conexion.query(consulta);
+        const tel = {telefono: telefono}
+        const validacion = personaSchema.safeParse(tel);
+        
+        if (!validacion.success) {
+            return {error: validacion.error};
+        }
+        const [results] = await conexion.query('SELECT * FROM personal WHERE telefono = ? AND estatus = 1', telefono);
         return results;
     }
     catch(error){
