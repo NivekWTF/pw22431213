@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 //Creamos la aplicacion a través del paquete express
 //y llamamos a su constructor
 
@@ -6,6 +7,8 @@ const app = express();
 //Configurar rutas para el acceso personal
 import personalRutas from './routes/personalRutas';
 
+//Activar el uso de CORS
+app.use(cors());
 
 //Todo lo que regresa al usuario es tipo JSON
 app.use(express.json());
