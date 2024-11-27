@@ -1,10 +1,10 @@
 <template>
-    <section class="top">
-        <h3>Personal</h3>
+    <section>
         <h3></h3>
+        <h3>Personal</h3>
         <div>
             <button class="btn btn-sm btn-primary">
-                Agregar
+                Agregar <i class="fa fa-plus"></i>
             </button>
         </div>
     </section>
@@ -51,8 +51,6 @@
         flex-flow: row wrap;
         justify-content: space-around;
         margin-top: 20px;
-       
-
     }
     .centrado {
         text-align: center;
